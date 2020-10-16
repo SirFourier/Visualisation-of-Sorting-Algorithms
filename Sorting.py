@@ -1,29 +1,39 @@
 # Visualization of Sorting Algorithms
 
-# import pygame
+import pygame
 import random
 
-# pygame.init()
+def quickSort(numbers):
+    # https://www.youtube.com/watch?v=MZaf_9IZCrc
+    if len(numbers) < 2: 
+        return numbers
 
-# Make a random set of numbers
-random_numbers = random.choices([i for i in range(20)],k=20)
-print(random_numbers)
-
-def QuickSort(numbers):
-    print(numbers)
-    pivot = numbers[-1]
     pivot_index = len(numbers) - 1
 
-    index = 0
-    number = numbers[index]
-    while number != pivot:
-        if number > pivot:
-            # swap pivot with number to the left of it
-            numbers[pivot_index - 1], numbers[pivot_index] = numbers[pivot_index], numbers[pivot_index - 1]
-            # swap number with previous pivot position
-            numbers[index], numbers[pivot_index] = numbers[pivot_index], numbers[index]
-            # set new pivot index
-            pivot_index -= 1
-    print(numbers)
-            
-QuickSort(random_numbers)
+    i = -1
+    j = 0
+    while j < pivot_index:
+        # if numbers[j] > numbers[pivot_index] then do nothing
+        if numbers[j] < numbers[pivot_index]:
+            i += 1
+            # swap numbers at i and j
+            numbers[i], numbers[j] = numbers[j], numbers[i]
+        j += 1
+    
+    # swap pivot with number at i + 1
+    numbers[i + 1], numbers[pivot_index] = numbers[pivot_index], numbers[i + 1]
+    pivot_index = i + 1
+
+    # partition left and right side
+    left = numbers[:pivot_index]
+    right = numbers[pivot_index + 1:]
+
+    # Call recursively on left and right side of pivot
+    return quickSort(left) + [numbers[pivot_index]] + quickSort(right)
+        
+
+# Make a random set of numbers
+random_numbers = random.choices([i for i in range(100)],k=100)
+print(random_numbers)
+sorted = quickSort(random_numbers)
+print(sorted)
