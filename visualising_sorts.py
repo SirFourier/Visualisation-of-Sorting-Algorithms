@@ -10,6 +10,12 @@ class SortVisualisation():
     """Class to encapsulate the visualisation of each sorting algorithm"""
     stop_threads = False
 
+    class Test():
+        sub_class_variable = 50
+
+        def __init__(self):
+            pass
+
     def __init__(self, sort_algorithm, rect_colour):
         self.rectangles = []
         self.sort_algorithm = sort_algorithm
@@ -202,8 +208,6 @@ if __name__ == "__main__":
     bubble_sort_visualisation.start(TIME_DELAY)
     insertion_sort_visualisation.start(TIME_DELAY)
     merge_sort_visualisation.start(TIME_DELAY)
-
-    start = time.time()
 
     while True:
         # Handling inputs
