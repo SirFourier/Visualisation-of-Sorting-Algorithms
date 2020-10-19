@@ -22,4 +22,6 @@ quick_sort(rects, delay)
 
 ### Merge sort (O(nlogn) on average)
 
+## Learning outcomes
+
 ## Possible future additions
