@@ -1,4 +1,4 @@
-"""This module visualises sorting algorithms using pygame"""
+"""This module visualises sorting algorithms using pygame and threading"""
 import random
 import sys
 import time
@@ -197,7 +197,7 @@ if __name__ == "__main__":
     merge_sort_visualisation.setup_title("Merge sort", FONT_SIZE, TEXT_COLOUR, 3 * SCREEN_WIDTH / 4, SCREEN_HEIGHT / 2 + FONT_SIZE / 2)
     
     # Algorithm
-    TIME_DELAY = 0.005
+    TIME_DELAY = 0.0001
     quick_sort_visualisation.start(TIME_DELAY)
     bubble_sort_visualisation.start(TIME_DELAY)
     insertion_sort_visualisation.start(TIME_DELAY)
