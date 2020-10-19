@@ -5,6 +5,10 @@
 ## Requirements to run
 The only requirement is to install pygame with pip -install pygame. Everything else is included in the standard library.
 
+## Important variables that can be changed
+  - The number of rectangles to sort with the QUANTITY variable
+  - The delay each algorithm has with the TIME_DELAY variable
+
 ## Inspiration
 I was inspired to have a go at visualising sorting algorithms from a Youtube video by Timo Bingmann: https://www.youtube.com/watch?v=kPRA0W1kECg. I wanted to see if I could display multiple visualisations in one screen which lead me to learn pygame and threading. The code has an infinite while loop which deals with displaying the rectangles. And 4 seperate threads that deal with sorting the rectangles based on their heights on the screen. These 4 seperate threads correspond to the 4 sorting algorithms I had chosen which are the following:
   - Quick sort (O(nlogn) on average)
