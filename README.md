@@ -22,4 +22,4 @@ I was inspired to have a go at visualising sorting algorithms from a Youtube vid
 
 ## Possible future additions
   - Colour rectangles that are being compared
-  - Add sounds
+  - Add sounds/
