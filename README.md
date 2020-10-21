@@ -1,4 +1,4 @@
-# Visualization-of-Sorting-Algorithms
+# Visualisation-of-Sorting-Algorithms
 
 ![sorting_gif](sorting.gif?raw=true)
 
